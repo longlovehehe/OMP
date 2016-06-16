@@ -1,0 +1,28 @@
+.img_start{
+    background: transparent url("./images/enable.png") no-repeat scroll 0px 0px;
+    padding-left: 15px;
+}
+.img_stop{
+    background: transparent url("./images/disable.png") no-repeat scroll 0px 0px;
+    padding-left: 15px;
+}
+.img_unbind{
+    background: transparent url("./images/unbind.png") no-repeat scroll 0px 0px;
+    padding-left: 15px;
+}
+
+a.view{
+    background: transparent url("./images/view.png") no-repeat scroll center center;
+    width: 24px;
+    height: 24px;
+}
+a.view:hover{
+    background: transparent url("./images/view_pass.png") no-repeat scroll center center;
+    width: 24px;
+    height: 24px;
+}
+a.view:visited{
+    background: transparent url("./images/view_click.png") no-repeat scroll center center;
+    width: 24px;
+    height: 24px;
+}

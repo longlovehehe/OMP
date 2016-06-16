@@ -1,0 +1,220 @@
+2016-05-23 13:36:14	127.0.0.1	数据库初始化失败，已强制断开链接。<br/>抓取到的异常栈如下：<br/><pre>PDOException Object
+(
+    [message:protected] => SQLSTATE[08006] [7] could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "10.0.0.49" and accepting
+	TCP/IP connections on port 5432?
+    [string:Exception:private] => 
+    [code:protected] => 7
+    [file:protected] => D:\Code\OP\omp\shell\class\db.class.php
+    [line:protected] => 85
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => D:\Code\OP\omp\shell\class\db.class.php
+                    [line] => 85
+                    [function] => __construct
+                    [class] => PDO
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => pgsql:host=10.0.0.49;port=5432;dbname=OMPDB;
+                            [1] => ompuser
+                            [2] => omppasswd
+                            [3] => Array
+                                (
+                                    [12] => 1
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => D:\Code\OP\omp\shell\class\dao\system.class.php
+                    [line] => 10
+                    [function] => __construct
+                    [class] => db
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => D:\Code\OP\omp\shell\class\contorl\DispatcherContorl.class.php
+                    [line] => 237
+                    [function] => __construct
+                    [class] => system
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [m] => login_check
+                                    [username] => wlf
+                                    [password] => a123456
+                                    [d] => 
+                                )
+
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => D:\Code\OP\omp\shell\init.php
+                    [line] => 82
+                    [function] => login_check
+                    [class] => DispatcherContorl
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => D:\Code\OP\omp\www\index.php
+                    [line] => 2
+                    [args] => Array
+                        (
+                            [0] => D:\Code\OP\omp\shell\init.php
+                        )
+
+                    [function] => require_once
+                )
+
+        )
+
+    [previous:Exception:private] => 
+    [errorInfo] => 
+    [xdebug_message] => <tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> PDOException: SQLSTATE[08006] [7] could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "10.0.0.49" and accepting
+	TCP/IP connections on port 5432? in D:\Code\OP\omp\shell\class\db.class.php on line <i>85</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0010</td><td bgcolor='#eeeeec' align='right'>240848</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='D:\Code\OP\omp\www\index.php' bgcolor='#eeeeec'>..\index.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0020</td><td bgcolor='#eeeeec' align='right'>272800</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'D:\Code\OP\omp\shell\init.php'</font> )</td><td title='D:\Code\OP\omp\www\index.php' bgcolor='#eeeeec'>..\index.php<b>:</b>2</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0420</td><td bgcolor='#eeeeec' align='right'>2941088</td><td bgcolor='#eeeeec'>DispatcherContorl->login_check(  )</td><td title='D:\Code\OP\omp\shell\init.php' bgcolor='#eeeeec'>..\init.php<b>:</b>82</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>4</td><td bgcolor='#eeeeec' align='center'>0.0440</td><td bgcolor='#eeeeec' align='right'>3083872</td><td bgcolor='#eeeeec'>system->__construct(  )</td><td title='D:\Code\OP\omp\shell\class\contorl\DispatcherContorl.class.php' bgcolor='#eeeeec'>..\DispatcherContorl.class.php<b>:</b>237</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>5</td><td bgcolor='#eeeeec' align='center'>0.0440</td><td bgcolor='#eeeeec' align='right'>3084272</td><td bgcolor='#eeeeec'>db->__construct(  )</td><td title='D:\Code\OP\omp\shell\class\dao\system.class.php' bgcolor='#eeeeec'>..\system.class.php<b>:</b>10</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>6</td><td bgcolor='#eeeeec' align='center'>0.0440</td><td bgcolor='#eeeeec' align='right'>3086928</td><td bgcolor='#eeeeec'><a href='http://www.php.net/PDO.construct' target='_new'>__construct</a>
+(  )</td><td title='D:\Code\OP\omp\shell\class\db.class.php' bgcolor='#eeeeec'>..\db.class.php<b>:</b>85</td></tr>
+
+)
+</pre>
+2016-05-23 13:36:18	127.0.0.1	数据库初始化失败，已强制断开链接。<br/>抓取到的异常栈如下：<br/><pre>PDOException Object
+(
+    [message:protected] => SQLSTATE[08006] [7] could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "10.0.0.49" and accepting
+	TCP/IP connections on port 5432?
+    [string:Exception:private] => 
+    [code:protected] => 7
+    [file:protected] => D:\Code\OP\omp\shell\class\db.class.php
+    [line:protected] => 85
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => D:\Code\OP\omp\shell\class\db.class.php
+                    [line] => 85
+                    [function] => __construct
+                    [class] => PDO
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => pgsql:host=10.0.0.49;port=5432;dbname=OMPDB;
+                            [1] => ompuser
+                            [2] => omppasswd
+                            [3] => Array
+                                (
+                                    [12] => 1
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => D:\Code\OP\omp\shell\class\dao\system.class.php
+                    [line] => 10
+                    [function] => __construct
+                    [class] => db
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => D:\Code\OP\omp\shell\class\contorl\DispatcherContorl.class.php
+                    [line] => 237
+                    [function] => __construct
+                    [class] => system
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [m] => login_check
+                                    [username] => wlf
+                                    [password] => a123456
+                                    [d] => 
+                                )
+
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => D:\Code\OP\omp\shell\init.php
+                    [line] => 82
+                    [function] => login_check
+                    [class] => DispatcherContorl
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => D:\Code\OP\omp\www\index.php
+                    [line] => 2
+                    [args] => Array
+                        (
+                            [0] => D:\Code\OP\omp\shell\init.php
+                        )
+
+                    [function] => require_once
+                )
+
+        )
+
+    [previous:Exception:private] => 
+    [errorInfo] => 
+    [xdebug_message] => <tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> PDOException: SQLSTATE[08006] [7] could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "10.0.0.49" and accepting
+	TCP/IP connections on port 5432? in D:\Code\OP\omp\shell\class\db.class.php on line <i>85</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0010</td><td bgcolor='#eeeeec' align='right'>240848</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='D:\Code\OP\omp\www\index.php' bgcolor='#eeeeec'>..\index.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0020</td><td bgcolor='#eeeeec' align='right'>272800</td><td bgcolor='#eeeeec'>require_once( <font color='#00bb00'>'D:\Code\OP\omp\shell\init.php'</font> )</td><td title='D:\Code\OP\omp\www\index.php' bgcolor='#eeeeec'>..\index.php<b>:</b>2</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0380</td><td bgcolor='#eeeeec' align='right'>2941088</td><td bgcolor='#eeeeec'>DispatcherContorl->login_check(  )</td><td title='D:\Code\OP\omp\shell\init.php' bgcolor='#eeeeec'>..\init.php<b>:</b>82</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>4</td><td bgcolor='#eeeeec' align='center'>0.0400</td><td bgcolor='#eeeeec' align='right'>3083872</td><td bgcolor='#eeeeec'>system->__construct(  )</td><td title='D:\Code\OP\omp\shell\class\contorl\DispatcherContorl.class.php' bgcolor='#eeeeec'>..\DispatcherContorl.class.php<b>:</b>237</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>5</td><td bgcolor='#eeeeec' align='center'>0.0410</td><td bgcolor='#eeeeec' align='right'>3084272</td><td bgcolor='#eeeeec'>db->__construct(  )</td><td title='D:\Code\OP\omp\shell\class\dao\system.class.php' bgcolor='#eeeeec'>..\system.class.php<b>:</b>10</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>6</td><td bgcolor='#eeeeec' align='center'>0.0410</td><td bgcolor='#eeeeec' align='right'>3086928</td><td bgcolor='#eeeeec'><a href='http://www.php.net/PDO.construct' target='_new'>__construct</a>
+(  )</td><td title='D:\Code\OP\omp\shell\class\db.class.php' bgcolor='#eeeeec'>..\db.class.php<b>:</b>85</td></tr>
+
+)
+</pre>
